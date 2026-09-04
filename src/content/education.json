@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ucl-nimh-phd",
+    "degree": "PhD in Computational Neuroscience",
+    "program": "UCL-NIMH Joint Doctoral Training Program in Neuroscience",
+    "start": "2020-01",
+    "end": "2025-12",
+    "dateLabel": "2020–2025",
+    "experience": {
+      "locationId": "london",
+      "department": "Applied Computational Psychiatry Lab, Division of Psychiatry and Max Planck UCL Centre for Computational Psychiatry and Aging Research",
+      "institutionIndex": 0
+    },
+    "advisors": [
+      "Prof. Quentin Huys (UCL, Primary)",
+      "Prof. Argyris Stringaris (NIMH, UCL)",
+      "Dr. Dylan Nielson (NIMH)"
+    ],
+    "institutions": [
+      {
+        "name": "University College London",
+        "location": "London, UK"
+      },
+      {
+        "name": "National Institute of Mental Health",
+        "location": "Bethesda, MD, USA"
+      }
+    ]
+  },
+  {
+    "id": "ut-austin-bachelors",
+    "degree": "B.S. in Psychology and B.A. in Economics",
+    "program": null,
+    "start": "2014-01",
+    "end": "2017-12",
+    "dateLabel": "2014–2017",
+    "experience": {
+      "locationId": "austin",
+      "department": "College of Liberal Arts",
+      "institutionIndex": 0
+    },
+    "advisors": [],
+    "institutions": [
+      {
+        "name": "University of Texas at Austin",
+        "location": "Austin, TX, USA"
+      }
+    ]
+  }
+]

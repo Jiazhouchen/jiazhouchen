@@ -1,0 +1,121 @@
+[
+  {
+    "id": "cpc-2025-llm-meg",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Nielson, D. M.", "highlight": false },
+      { "name": "Huys, Q. J. M.", "highlight": false }
+    ],
+    "title": "Decoding large language model-quantified emotion with MEG",
+    "researchAreaIds": ["emotion-llm-neuroimaging"],
+    "description": "A presentation on relating language-model-derived measures of emotion to neural signals recorded with MEG.",
+    "format": "Spotlight presentation and poster presentation",
+    "venue": "Computational Psychiatry Conference",
+    "date": "2025-07",
+    "dateLabel": "July 2025",
+    "location": "Tübingen, Germany"
+  },
+  {
+    "id": "whni-2023-affect-labeling",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Nielson, D. M.", "highlight": false },
+      { "name": "Stringaris, A.", "highlight": false },
+      { "name": "Huys, Q. J. M.", "highlight": false }
+    ],
+    "title": "Decode in-task affect labeling using MEG",
+    "researchAreaIds": ["emotion-llm-neuroimaging"],
+    "description": "A project presentation on decoding affect labels from MEG activity recorded during a task.",
+    "format": "Oral project presentation",
+    "venue": "Wellcome Centre for Human Neuroimaging",
+    "date": "2023-05",
+    "dateLabel": "May 2023",
+    "location": "London, United Kingdom"
+  },
+  {
+    "id": "sobp-2019-punishment-learning",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Brown, V.", "highlight": false },
+      { "name": "Szanto, K.", "highlight": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false }
+    ],
+    "title": "Threat of punishment disrupts model-based learning in late-life depression and suicide",
+    "researchAreaIds": ["learning-decision-meta-level-modeling"],
+    "description": "A poster examining model-based learning under threat of punishment in late-life depression and suicide.",
+    "format": "Late-breaking poster",
+    "venue": "Society of Biological Psychiatry 74th Annual Scientific Conference and University of Pittsburgh Department of Psychiatry Research Day",
+    "date": "2019-05",
+    "dateLabel": "May–June 2019",
+    "location": "Chicago, IL and Pittsburgh, PA, USA"
+  },
+  {
+    "id": "sobp-2019-naltrexone-context",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Mizuno, A.", "highlight": false },
+      { "name": "Karim, H.", "highlight": false },
+      { "name": "Lyew, T.", "highlight": false },
+      { "name": "Peciña, M.", "highlight": false }
+    ],
+    "title": "Naltrexone modulation of contextual effects during emotional processing",
+    "researchAreaIds": ["affective-dynamics-decision-making"],
+    "description": "A poster on the effects of naltrexone on context-dependent emotional processing.",
+    "format": "Late-breaking poster",
+    "venue": "Society of Biological Psychiatry 74th Annual Scientific Conference and University of Pittsburgh Department of Psychiatry Research Day",
+    "date": "2019-05",
+    "dateLabel": "May–June 2019",
+    "location": "Chicago, IL and Pittsburgh, PA, USA"
+  },
+  {
+    "id": "sobp-2019-opioid-blockade",
+    "authors": [
+      { "name": "Peciña, M.", "highlight": false },
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Lyew, T.", "highlight": false },
+      { "name": "Karp, J.", "highlight": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false }
+    ],
+    "title": "Mu opioid blockade reduces antidepressant placebo effects by disrupting corticostriatothalamic encoding of reinforcement",
+    "researchAreaIds": ["affective-dynamics-decision-making", "learning-decision-meta-level-modeling"],
+    "description": "A poster examining opioid blockade, antidepressant placebo effects, and neural reinforcement encoding.",
+    "format": "Late-breaking poster",
+    "venue": "Society of Biological Psychiatry 74th Annual Scientific Conference",
+    "date": "2019-05",
+    "dateLabel": "May 2019",
+    "location": "Chicago, IL, USA"
+  },
+  {
+    "id": "acnp-2018-placebo-mechanisms",
+    "authors": [
+      { "name": "Peciña, M.", "highlight": false },
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Lyew, T.", "highlight": false },
+      { "name": "Karp, J.", "highlight": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false }
+    ],
+    "title": "Neuro-computational mechanisms of antidepressant placebo effects",
+    "researchAreaIds": ["affective-dynamics-decision-making", "learning-decision-meta-level-modeling"],
+    "description": "A poster presenting a neurocomputational account of antidepressant placebo effects.",
+    "format": "Poster",
+    "venue": "Annual Meeting of the American College of Neuropsychopharmacology",
+    "date": "2018-12",
+    "dateLabel": "December 2018",
+    "location": "Hollywood, FL, USA"
+  },
+  {
+    "id": "uta-2017-bilingual-diffusion",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Echols, C.", "highlight": false }
+    ],
+    "title": "Differences between bilinguals and monolinguals in executive function tasks: A diffusion model analysis",
+    "researchAreaIds": ["learning-decision-meta-level-modeling"],
+    "description": "A diffusion-model analysis comparing performance by bilingual and monolingual participants on executive-function tasks.",
+    "format": "Poster",
+    "venue": "Honors Thesis Poster Session, University of Texas at Austin Psychology Department",
+    "date": "2017-05",
+    "dateLabel": "May 2017",
+    "location": "Austin, TX, USA"
+  }
+]

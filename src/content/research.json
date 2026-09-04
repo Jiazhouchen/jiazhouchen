@@ -1,0 +1,74 @@
+[
+  {
+    "id": "nimh-postdoc",
+    "role": "Postdoctoral Fellow",
+    "start": "2025-01",
+    "end": null,
+    "dateLabel": "2025–Present",
+    "experience": {
+      "locationId": "bethesda",
+      "department": "Unit on Computational Decision Neuroscience, Emotion and Development Branch",
+      "institution": "National Institute of Mental Health"
+    },
+    "groups": [
+      {
+        "name": "Unit on Computational Decision Neuroscience",
+        "leadership": "P.I. Dr. Silvia Lopez-Guzman",
+        "organization": "Emotion and Development Branch, National Institute of Mental Health",
+        "location": "Bethesda, MD, USA"
+      }
+    ]
+  },
+  {
+    "id": "phd-predoctoral",
+    "role": "Predoctoral Fellow",
+    "start": "2020-01",
+    "end": "2025-12",
+    "dateLabel": "2020–2025",
+    "experience": {
+      "locationId": "bethesda",
+      "department": "Emotion and Development Branch",
+      "institution": "National Institute of Mental Health"
+    },
+    "groups": [
+      {
+        "name": "Applied Computational Psychiatry Lab",
+        "leadership": "P.I. Prof. Quentin Huys",
+        "organization": "Division of Psychiatry and Max Planck UCL Centre for Computational Psychiatry and Aging Research, University College London",
+        "location": "London, U.K."
+      },
+      {
+        "name": "Emotion and Development Branch",
+        "leadership": "P.I. Prof. Argyris Stringaris and Dr. Daniel Pine",
+        "organization": "National Institute of Mental Health",
+        "location": "Bethesda, MD, USA"
+      }
+    ]
+  },
+  {
+    "id": "pittsburgh-programmer",
+    "role": "Research Programmer / Analyst",
+    "start": "2017-01",
+    "end": "2020-12",
+    "dateLabel": "2017–2020",
+    "experience": {
+      "locationId": "pittsburgh",
+      "department": "Decision Neuroscience and Psychopathology Lab and Translational Neuropsychopharmacology Lab, Department of Psychiatry",
+      "institution": "University of Pittsburgh Medical Center"
+    },
+    "groups": [
+      {
+        "name": "Decision Neuroscience and Psychopathology Lab",
+        "leadership": "P.I. Prof. Alexander Dombrovski",
+        "organization": "Department of Psychiatry, University of Pittsburgh Medical Center",
+        "location": "Pittsburgh, PA, USA"
+      },
+      {
+        "name": "Translational Neuropsychopharmacology & Neuroimaging Lab",
+        "leadership": "P.I. Dr. Marta Peciña",
+        "organization": "Department of Psychiatry, University of Pittsburgh Medical Center",
+        "location": "Pittsburgh, PA, USA"
+      }
+    ]
+  }
+]

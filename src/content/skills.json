@@ -1,0 +1,32 @@
+[
+  {
+    "id": "programming",
+    "label": "Programming Languages",
+    "items": ["R", "Python", "Matlab", "Bash", "HTML5", "JavaScript"]
+  },
+  {
+    "id": "machine-learning",
+    "label": "Machine Learning",
+    "items": ["Fine-tuning large language models", "Logistic regression", "Convolutional neural networks", "Recurrent neural networks", "Transformers"]
+  },
+  {
+    "id": "modeling",
+    "label": "Statistical & Modeling Tools",
+    "items": ["R", "STAN", "PyTorch", "Variational Bayesian Analysis ToolBox", "fast-dm", "STATA", "SPSS"]
+  },
+  {
+    "id": "experiments",
+    "label": "Experiments & Data Collection",
+    "items": ["PsychoPy", "jsPsych", "Amazon MTurk", "Pavlovia", "Prolific", "REDCap", "Qualtrics", "MySQL"]
+  },
+  {
+    "id": "imaging",
+    "label": "Brain Imaging",
+    "items": ["MRI (3T)", "MEG", "EEG", "FSL", "AFNI"]
+  },
+  {
+    "id": "general",
+    "label": "General Computer Skills",
+    "items": ["Unix", "Windows", "Microsoft Office", "iWork", "Static and motion graphics", "Web design"]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "nationality",
+    "label": "Nationality",
+    "value": "United States of America"
+  },
+  {
+    "id": "uk-work",
+    "label": "U.K. Work Eligibility",
+    "value": "Maximum of 20 hours per week allowed"
+  },
+  {
+    "id": "honors",
+    "label": "Honors & Grants",
+    "value": "Honors in Psychology; University Undergraduate Research Fund"
+  },
+  {
+    "id": "languages",
+    "label": "Languages",
+    "value": "English (Proficient), Cantonese (Native), Mandarin (Native), Spanish (Conversational)"
+  },
+  {
+    "id": "reviewing",
+    "label": "Ad Hoc Reviewing",
+    "value": "European Child & Adolescent Psychiatry; Imaging Neuroscience"
+  }
+]

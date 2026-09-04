@@ -1,0 +1,7 @@
+[
+  { "id": "guangzhou", "name": "Guangzhou", "region": "Guangdong, China", "latitude": 23.1291, "longitude": 113.2644 },
+  { "id": "austin", "name": "Austin", "region": "TX, USA", "latitude": 30.2672, "longitude": -97.7431 },
+  { "id": "pittsburgh", "name": "Pittsburgh", "region": "PA, USA", "latitude": 40.4406, "longitude": -79.9959 },
+  { "id": "london", "name": "London", "region": "UK", "latitude": 51.5074, "longitude": -0.1278 },
+  { "id": "bethesda", "name": "Bethesda", "region": "MD, USA", "latitude": 38.9847, "longitude": -77.0947 }
+]

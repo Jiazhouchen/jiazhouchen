@@ -1,0 +1,160 @@
+[
+  {
+    "id": "onysk-chen-2026-emotions",
+    "authors": [
+      { "name": "Onysk, J.", "highlight": false, "equalContribution": true },
+      { "name": "Chen, J.", "highlight": true, "equalContribution": true },
+      { "name": "Huys, Q. J.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2026,
+    "type": "review",
+    "title": "NPPR—On the computational nature of emotions: insights from metareasoning and transformers",
+    "researchAreaIds": ["emotion-llm-neuroimaging", "learning-decision-meta-level-modeling"],
+    "description": "A perspective on how metareasoning and transformer-based models can help characterize the computational nature of emotion.",
+    "venue": "Neuropsychopharmacology",
+    "status": "Accepted",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi": null,
+    "pmid": null,
+    "pmcid": null
+  },
+  {
+    "id": "chen-2023-cognitive-effort",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true, "equalContribution": false },
+      { "name": "Huys, Q. J. M.", "highlight": false, "equalContribution": false },
+      { "name": "Stringaris, A.", "highlight": false, "equalContribution": false },
+      { "name": "Nielson, D. M.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2023,
+    "type": "preprint",
+    "title": "On the misery of cognitive effort",
+    "researchAreaIds": ["learning-decision-meta-level-modeling"],
+    "description": "A computational investigation of why cognitive effort carries a subjective cost and how that cost shapes decisions about mental work.",
+    "venue": "PsyArXiv",
+    "status": "Published online March 5, 2023",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi": "10.31234/osf.io/r9e4j",
+    "pmid": null,
+    "pmcid": null
+  },
+  {
+    "id": "pecina-2023-placebo-expectancies",
+    "authors": [
+      { "name": "Peciña, M.", "highlight": false, "equalContribution": false },
+      { "name": "Chen, J.", "highlight": true, "equalContribution": false },
+      { "name": "Karp, J. F.", "highlight": false, "equalContribution": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2023,
+    "type": "article",
+    "title": "Dynamic feedback between antidepressant placebo expectancies and mood",
+    "researchAreaIds": ["affective-dynamics-decision-making"],
+    "description": "An examination of the evolving relationship between antidepressant placebo expectations and mood during treatment.",
+    "venue": "JAMA Psychiatry",
+    "status": null,
+    "volume": "80",
+    "issue": "4",
+    "pages": "389–398",
+    "doi": "10.1001/jamapsychiatry.2023.0010",
+    "pmid": "36857039",
+    "pmcid": "PMC9979016"
+  },
+  {
+    "id": "pecina-2021-naltrexone-placebo",
+    "authors": [
+      { "name": "Peciña, M.", "highlight": false, "equalContribution": false },
+      { "name": "Chen, J.", "highlight": true, "equalContribution": false },
+      { "name": "Lyew, T.", "highlight": false, "equalContribution": false },
+      { "name": "Karp, J. F.", "highlight": false, "equalContribution": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2021,
+    "type": "article",
+    "title": "µ-Opioid antagonist naltrexone partially abolishes the antidepressant placebo effect and reduces orbitofrontal cortex encoding of reinforcement",
+    "researchAreaIds": ["affective-dynamics-decision-making", "learning-decision-meta-level-modeling"],
+    "description": "A study of how opioid blockade alters antidepressant placebo effects and neural encoding of reinforcement.",
+    "venue": "Biological Psychiatry: Cognitive Neuroscience and Neuroimaging",
+    "status": null,
+    "volume": "6",
+    "issue": "10",
+    "pages": null,
+    "doi": "10.1016/j.bpsc.2021.02.009",
+    "pmid": null,
+    "pmcid": null
+  },
+  {
+    "id": "chen-2020-naltrexone-context",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true, "equalContribution": true },
+      { "name": "Mizuno, A.", "highlight": false, "equalContribution": true },
+      { "name": "Lyew, T.", "highlight": false, "equalContribution": false },
+      { "name": "Karim, H. T.", "highlight": false, "equalContribution": false },
+      { "name": "Karp, J. F.", "highlight": false, "equalContribution": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false, "equalContribution": false },
+      { "name": "Peciña, M.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2020,
+    "type": "article",
+    "title": "Naltrexone modulates contextual processing in depression",
+    "researchAreaIds": ["affective-dynamics-decision-making"],
+    "description": "An investigation of how naltrexone changes context-dependent emotional processing in depression.",
+    "venue": "Neuropsychopharmacology",
+    "status": null,
+    "volume": "45",
+    "issue": "12",
+    "pages": "2070–2078",
+    "doi": "10.1038/s41386-020-00809-2",
+    "pmid": null,
+    "pmcid": null
+  },
+  {
+    "id": "pecina-2020-placebo-response",
+    "authors": [
+      { "name": "Peciña, M.", "highlight": false, "equalContribution": false },
+      { "name": "Lyew, T.", "highlight": false, "equalContribution": false },
+      { "name": "Chen, J.", "highlight": true, "equalContribution": false },
+      { "name": "Karp, J.", "highlight": false, "equalContribution": false },
+      { "name": "Dombrovski, A. Y.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2020,
+    "type": "conference-proceedings",
+    "title": "Neural correlates of antidepressant expectancies positively moderate antidepressant treatment response to placebo but not escitalopram in major depression",
+    "researchAreaIds": ["affective-dynamics-decision-making"],
+    "description": "A study relating neural correlates of treatment expectations to placebo and escitalopram responses in major depression.",
+    "venue": "Biological Psychiatry",
+    "status": null,
+    "volume": "87",
+    "issue": "9",
+    "pages": "S107",
+    "doi": "10.1016/j.biopsych.2020.02.293",
+    "pmid": null,
+    "pmcid": null
+  },
+  {
+    "id": "brown-2020-model-based-planning",
+    "authors": [
+      { "name": "Brown, V. M.", "highlight": false, "equalContribution": false },
+      { "name": "Chen, J.", "highlight": true, "equalContribution": false },
+      { "name": "Gillan, C. M.", "highlight": false, "equalContribution": false },
+      { "name": "Price, R. B.", "highlight": false, "equalContribution": false }
+    ],
+    "year": 2020,
+    "type": "article",
+    "title": "Improving the reliability of computational analyses: Model-based planning and its relationship with compulsivity",
+    "researchAreaIds": ["learning-decision-meta-level-modeling"],
+    "description": "A methodological investigation of the reliability of model-based planning measures and their relationship with compulsivity.",
+    "venue": "Biological Psychiatry: Cognitive Neuroscience and Neuroimaging",
+    "status": null,
+    "volume": "5",
+    "issue": "6",
+    "pages": null,
+    "doi": "10.1016/j.bpsc.2019.12.019",
+    "pmid": null,
+    "pmcid": null
+  }
+]

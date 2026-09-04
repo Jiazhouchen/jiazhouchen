@@ -1,0 +1,20 @@
+[
+  {
+    "id": "emotion-llm-neuroimaging",
+    "title": "Neural Representation of Emotion Using LLMs and Neural Imaging",
+    "navLabel": "Emotion, LLMs & Imaging",
+    "description": "Research connecting computational accounts of emotion and language-model-derived representations with measurements of neural activity."
+  },
+  {
+    "id": "affective-dynamics-decision-making",
+    "title": "Affective Dynamics and State-Dependent Decision-Making",
+    "navLabel": "Affective Dynamics",
+    "description": "Work examining how affective states, expectations, and context develop over time and shape decisions and treatment-related responses."
+  },
+  {
+    "id": "learning-decision-meta-level-modeling",
+    "title": "Computational Modeling of Learning, Decision-Making and Meta-Level Decision Processes",
+    "navLabel": "Learning and Decision-making",
+    "description": "Computational studies of reinforcement learning, model-based planning, metacognition, metareasoning, cognitive effort, and the allocation of cognitive resources across behavioral and clinical contexts."
+  }
+]

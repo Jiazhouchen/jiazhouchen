@@ -1,0 +1,74 @@
+:root {
+  --font-sans: "Roboto", Arial, sans-serif;
+  --font-heading: "Roboto Condensed", "Arial Narrow", sans-serif;
+
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-raised: #fafbfa;
+  --text: #1d251f;
+  --text-muted: #4d5b50;
+  --action: #2f6b52;
+  --active-pin: #1f7650;
+  --action-text: #ffffff;
+  --border: #30463a;
+  --border-soft: #c5cec8;
+  --spring: #cfe8d5;
+  --accent-soft: #d9ecde;
+  --accent-soft-2: #e2f0e5;
+  --accent-soft-3: #c7decf;
+  --map-water: #ffffff;
+  --map-land: #f6f8f6;
+  --shadow-color: rgba(29, 37, 31, 0.09);
+  --glass-surface: rgba(255, 255, 255, 0.72);
+  --glass-surface-strong: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(48, 70, 58, 0.18);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --focus: #0a6b3f;
+  --research: #2f6b52;
+  --education: #3f7659;
+  --presentation: #527d64;
+
+  --border-width: 1.5px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 3px 12px var(--shadow-color);
+  --shadow-md: 0 12px 30px var(--shadow-color);
+  --shadow-lg: 0 18px 48px var(--shadow-color);
+  --shadow-glass: 0 12px 34px rgba(29, 37, 31, 0.12), inset 0 1px 0 var(--glass-highlight);
+  --content-width: 1480px;
+  --header-height: 74px;
+  --site-header-current-height: var(--header-height);
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e0b09;
+  --surface: #18120f;
+  --surface-raised: #211813;
+  --text: #dcc7b7;
+  --text-muted: #b49b89;
+  --action: #df986e;
+  --active-pin: #ed7f48;
+  --action-text: #1d100a;
+  --border: #a96545;
+  --border-soft: #704533;
+  --spring: #563322;
+  --accent-soft: #633b28;
+  --accent-soft-2: #4d3023;
+  --accent-soft-3: #684532;
+  --map-water: #18120f;
+  --map-land: #211813;
+  --shadow-color: rgba(0, 0, 0, 0.38);
+  --glass-surface: rgba(24, 18, 15, 0.72);
+  --glass-surface-strong: rgba(33, 24, 19, 0.9);
+  --glass-border: rgba(223, 152, 110, 0.3);
+  --glass-highlight: rgba(255, 255, 255, 0.08);
+  --focus: #ffc29b;
+  --research: #dfa17d;
+  --education: #c77d55;
+  --presentation: #e3b091;
+  --shadow-sm: 0 2px 8px var(--shadow-color);
+  --shadow-md: 0 10px 28px var(--shadow-color);
+  --shadow-lg: 0 16px 42px var(--shadow-color);
+  --shadow-glass: 0 14px 38px rgba(0, 0, 0, 0.45), inset 0 1px 0 var(--glass-highlight);
+}

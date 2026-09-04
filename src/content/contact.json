@@ -1,0 +1,23 @@
+{
+  "email": "jiazhou.chen@nih.gov",
+  "profiles": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/Jiazhouchen",
+      "description": "Code and research tools"
+    },
+    {
+      "id": "scholar",
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=WGWC4PgAAAAJ",
+      "description": "Publications and citations"
+    },
+    {
+      "id": "researchgate",
+      "label": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Jiazhou_Chen3",
+      "description": "Research outputs and posters"
+    }
+  ]
+}

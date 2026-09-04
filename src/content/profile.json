@@ -1,0 +1,14 @@
+{
+  "name": "Jiazhou Chen, PhD",
+  "shortName": "JC",
+  "role": "Postdoctoral Fellow",
+  "unit": "Unit on Computational Decision Neuroscience",
+  "organization": "National Institute of Mental Health",
+  "branch": "Emotion and Development Branch",
+  "location": "Bethesda, MD, USA",
+  "origin": {
+    "locationId": "guangzhou",
+    "end": "2012-12"
+  },
+  "intro": "I study how decision-making, emotion, and effort are represented in the mind and brain using computational models, neuroimaging, and behavioral experiments."
+}
