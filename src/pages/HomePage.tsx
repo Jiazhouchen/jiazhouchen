@@ -7,7 +7,7 @@ import { usePageMeta } from '../utils/pageMeta'
 
 export function HomePage() {
   usePageMeta({
-    title: 'Jiazhou Chen · Computational Neuroscientist',
+    title: 'Jiazhou Chen',
     description: 'Jiazhou Chen is a computational neuroscientist studying decision-making, emotion, and mental health.',
     path: '/',
   })
