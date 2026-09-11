@@ -838,6 +838,67 @@ h2 {
   gap: 0.75rem;
 }
 
+.print-only {
+  display: none;
+}
+
+.private-print-dialog {
+  width: min(calc(100% - 2rem), 520px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  background: var(--glass-surface-strong);
+  box-shadow: var(--shadow-md);
+  color: var(--text);
+  backdrop-filter: blur(24px) saturate(1.12);
+  -webkit-backdrop-filter: blur(24px) saturate(1.12);
+}
+
+.private-print-dialog::backdrop {
+  background: color-mix(in srgb, var(--bg) 55%, transparent);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.private-print-dialog__form {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.private-print-dialog__form header p:last-child {
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+.private-print-dialog__form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.private-print-dialog__form input {
+  min-height: 46px;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.private-print-dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
 .section-nav {
   position: sticky;
   z-index: 80;
@@ -1820,7 +1881,7 @@ h2 {
   }
 
   .cv-toolbar h1 {
-    font-size: 16pt;
+    font-size: 13pt;
     text-align: center;
   }
 
@@ -1832,13 +1893,25 @@ h2 {
     box-shadow: none;
   }
 
-  .cv-document::before {
-    display: block;
+  .print-only {
+    display: block !important;
+  }
+
+  .cv-print-identity {
     margin-bottom: 0.25in;
-    content: "Jiazhou Chen";
-    font-size: 22pt;
-    font-weight: 800;
     text-align: center;
+  }
+
+  .cv-print-identity h2 {
+    margin-bottom: 0.04in;
+    font-size: 18pt;
+  }
+
+  .cv-print-identity p {
+    margin: 0;
+    font-size: 8pt;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .cv-section {
@@ -1858,6 +1931,35 @@ h2 {
     border-radius: 0;
     box-shadow: none;
     font-size: 11pt;
+  }
+
+  .cv-entry__heading h3,
+  .award-entry__heading h3,
+  .skill-groups h3 {
+    font-size: 10pt;
+  }
+
+  .cv-entry__heading > span,
+  .award-entry__heading span,
+  .award-entry__heading time {
+    font-size: 8.5pt;
+  }
+
+  .cv-entry__lead {
+    font-size: 9.2pt;
+  }
+
+  .cv-entry__department {
+    font-size: 8.3pt;
+  }
+
+  .citation {
+    font-size: 8.7pt;
+    line-height: 1.35;
+  }
+
+  .equal-contribution-note {
+    font-size: 7.5pt;
   }
 
   .cv-entry,

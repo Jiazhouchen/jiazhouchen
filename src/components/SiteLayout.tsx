@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -12,6 +12,7 @@ const links = [
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const headerRef = useRef<HTMLElement>(null)
+  const cvBrandClickCountRef = useRef(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const activeIndex = pathname.startsWith('/cv')
     ? 1
@@ -24,7 +25,19 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' })
+    cvBrandClickCountRef.current = 0
   }, [pathname])
+
+  const handleBrandClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!pathname.startsWith('/cv')) return
+
+    event.preventDefault()
+    cvBrandClickCountRef.current += 1
+    if (cvBrandClickCountRef.current >= 10) {
+      cvBrandClickCountRef.current = 0
+      window.dispatchEvent(new Event('open-private-cv-print'))
+    }
+  }
 
   useEffect(() => {
     const header = headerRef.current
@@ -39,7 +52,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="site-shell">
       <header ref={headerRef} className="site-header no-print">
-        <NavLink className="site-brand" to="/" aria-label="Jiazhou Chen, home">
+        <NavLink className="site-brand" to="/" aria-label="Jiazhou Chen, home" onClick={handleBrandClick}>
           Jiazhou Chen
         </NavLink>
         <nav

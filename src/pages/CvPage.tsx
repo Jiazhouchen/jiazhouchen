@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Printer } from 'lucide-react'
 import { content } from '../content'
 import { CitationAuthors } from '../components/CitationAuthors'
@@ -16,7 +17,16 @@ const cvSections = [
   { id: 'additional', label: 'Additional' },
 ]
 
+type PrivatePrintContact = {
+  email: string
+  phone: string
+  address: string
+}
+
 export function CvPage() {
+  const printDialogRef = useRef<HTMLDialogElement>(null)
+  const [privatePrintContact, setPrivatePrintContact] = useState<PrivatePrintContact | null>(null)
+
   usePageMeta({
     title: 'Curriculum Vitae · Jiazhou Chen',
     description: 'Education, research, publications, presentations, and skills.',
@@ -24,20 +34,96 @@ export function CvPage() {
     noIndex: true,
   })
 
+  useEffect(() => {
+    const openPrivatePrintDialog = () => {
+      if (!printDialogRef.current?.open) printDialogRef.current?.showModal()
+    }
+    const clearPrivatePrintContact = () => setPrivatePrintContact(null)
+
+    window.addEventListener('open-private-cv-print', openPrivatePrintDialog)
+    window.addEventListener('afterprint', clearPrivatePrintContact)
+    return () => {
+      window.removeEventListener('open-private-cv-print', openPrivatePrintDialog)
+      window.removeEventListener('afterprint', clearPrivatePrintContact)
+    }
+  }, [])
+
+  const printCv = (contact: PrivatePrintContact | null) => {
+    setPrivatePrintContact(contact)
+    window.setTimeout(() => window.print(), 0)
+  }
+
+  const printWithPrivateContact = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const contact = {
+      email: String(formData.get('email') ?? '').trim(),
+      phone: String(formData.get('phone') ?? '').trim(),
+      address: String(formData.get('address') ?? '').trim(),
+    }
+
+    printDialogRef.current?.close()
+    form.reset()
+    printCv(contact)
+  }
+
+  const privateContactLine = privatePrintContact
+    ? [privatePrintContact.email, privatePrintContact.phone, privatePrintContact.address].filter(Boolean).join(' · ')
+    : ''
+
   return (
     <div className="page cv-page">
       <header className="cv-toolbar">
         <h1>Curriculum Vitae</h1>
         <div className="cv-toolbar__actions no-print">
-          <button className="button" type="button" onClick={() => window.print()}>
+          <button className="button" type="button" onClick={() => printCv(null)}>
             <Printer size={18} aria-hidden="true" /> Print CV
           </button>
         </div>
       </header>
 
+      <dialog
+        className="private-print-dialog no-print"
+        ref={printDialogRef}
+        aria-labelledby="private-print-title"
+        onClose={(event) => event.currentTarget.querySelector('form')?.reset()}
+      >
+        <form className="private-print-dialog__form" onSubmit={printWithPrivateContact}>
+          <header>
+            <p className="eyebrow">Private print details</p>
+            <h2 id="private-print-title">Add contact information</h2>
+            <p>These details are used only for this print and are not saved.</p>
+          </header>
+          <label>
+            Email
+            <input name="email" type="email" autoComplete="email" />
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" autoComplete="tel" />
+          </label>
+          <label>
+            Current address
+            <input name="address" type="text" autoComplete="street-address" />
+          </label>
+          <div className="private-print-dialog__actions">
+            <button className="button" type="button" onClick={() => printDialogRef.current?.close()}>Cancel</button>
+            <button className="button button--primary" type="submit">
+              <Printer size={18} aria-hidden="true" /> Print
+            </button>
+          </div>
+        </form>
+      </dialog>
+
       <SectionNavigation sections={cvSections} label="Curriculum Vitae sections" className="cv-section-nav" />
 
       <div className="cv-document">
+        <header className="cv-print-identity print-only">
+          <h2>Jiazhou Chen</h2>
+          {privateContactLine && <p>{privateContactLine}</p>}
+        </header>
+
         <section className="cv-section" id="education" aria-labelledby="education-heading">
           <h2 id="education-heading">Education</h2>
           {content.education.map((entry) => (
