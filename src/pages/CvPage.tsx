@@ -67,9 +67,8 @@ export function CvPage() {
                 <div className="cv-subentry" key={`${group.lab ?? group.department}-${group.location}`}>
                   {group.lab && <p className="cv-entry__lead">{group.lab} <span>({group.leadership})</span></p>}
                   <p className="cv-entry__department">
-                    {group.department}{!group.lab && <span> ({group.leadership})</span>}
+                    {group.department}{!group.lab && <span> ({group.leadership})</span>}, {group.institution}, {group.location}
                   </p>
-                  <p>{group.institution}, {group.location}</p>
                 </div>
               ))}
             </article>
@@ -78,7 +77,6 @@ export function CvPage() {
 
         <section className="cv-section" id="publications" aria-labelledby="publications-heading">
           <h2 id="publications-heading">Publications</h2>
-          <p className="equal-contribution"><strong><sup>*</sup> Equal contribution</strong></p>
           <div className="output-list">
             {content.publications.map((publication) => <PublicationItem publication={publication} key={publication.id} />)}
           </div>

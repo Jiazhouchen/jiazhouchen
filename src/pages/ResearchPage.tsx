@@ -12,16 +12,12 @@ const publicationTypeLabels: Record<Publication['type'], string> = {
 }
 
 function PublicationDetails({ publication }: { publication: Publication }) {
-  const publicationMeta = [
-    publicationTypeLabels[publication.type],
-    publication.type === 'article' ? 'Publication' : null,
-    publication.year,
-  ].filter(Boolean).join(' · ')
-
   return (
     <details className="research-output">
       <summary>
-        <span className="research-output__meta">{publicationMeta}</span>
+        <span className="research-output__meta">
+          {publicationTypeLabels[publication.type]} · {publication.publication} · {publication.year}
+        </span>
         <span className="research-output__title">{publication.title}</span>
         <span className="research-output__toggle" aria-hidden="true">+</span>
       </summary>

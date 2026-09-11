@@ -631,7 +631,7 @@ h2 {
   display: grid;
   gap: 0.2rem;
   margin: 0;
-  padding: 0.7rem 0.85rem 1rem 0.65rem;
+  padding: 0.7rem 0.85rem 2rem 0.65rem;
   overflow-y: auto;
   list-style: none;
   scrollbar-color: var(--border-soft) transparent;
@@ -691,6 +691,11 @@ h2 {
 .timeline-item:active {
   box-shadow: inset 0 3px 8px var(--shadow-color);
   transform: translateX(3px) translateY(1px) scale(0.985);
+}
+
+.timeline-item:focus-visible {
+  outline-width: 2px;
+  outline-offset: -3px;
 }
 
 .timeline-item__marker {
@@ -1081,24 +1086,6 @@ h2 {
   gap: 0.22rem;
   font-size: 0.79rem;
   font-weight: 800;
-}
-
-.equal-contribution {
-  display: inline-flex;
-  margin: 0 0 1rem;
-  padding: 0;
-  color: var(--text);
-  font-size: 0.84rem;
-}
-
-.equal-contribution sup {
-  position: relative;
-  top: 0.08em;
-  margin-right: 0.12em;
-  color: var(--action);
-  font-size: 1.45em;
-  font-weight: 900;
-  line-height: 0;
 }
 
 .skill-groups {
