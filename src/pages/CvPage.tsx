@@ -19,7 +19,7 @@ const cvSections = [
 export function CvPage() {
   usePageMeta({
     title: 'Curriculum Vitae · Jiazhou Chen',
-    description: 'Education, research, publications, presentations, and skills of computational neuroscientist Jiazhou Chen.',
+    description: 'Education, research, publications, presentations, and skills.',
     path: '/cv/',
     noIndex: true,
   })

@@ -12,7 +12,7 @@ const icons = {
 export function ConnectPage() {
   usePageMeta({
     title: 'Connect · Jiazhou Chen',
-    description: 'Contact Jiazhou Chen and read current research and hiring posts.',
+    description: 'Contact Jiazhou Chen.',
     path: '/connect/',
   })
 
