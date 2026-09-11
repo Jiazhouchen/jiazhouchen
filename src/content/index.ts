@@ -129,7 +129,7 @@ const publicationsSchema = z.array(z.object({
   title: z.string().min(1),
   researchAreaIds: z.array(id).min(1),
   description: z.string().min(1),
-  venue: z.string().min(1),
+  publication: z.string().min(1),
   status: z.string().min(1).nullable(),
   volume: z.string().min(1).nullable(),
   issue: z.string().min(1).nullable(),
