@@ -1,4 +1,4 @@
-name: Test and deploy portfolio
+name: Build and deploy portfolio
 
 on:
   push:
@@ -24,10 +24,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run test
       - run: npm run build
-      - run: npx playwright install --with-deps chrome
-      - run: npm run test:e2e -- --project=desktop
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

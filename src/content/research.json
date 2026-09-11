@@ -12,9 +12,10 @@
     },
     "groups": [
       {
-        "name": "Unit on Computational Decision Neuroscience",
+        "lab": "Unit on Computational Decision Neuroscience",
         "leadership": "P.I. Dr. Silvia Lopez-Guzman",
-        "organization": "Emotion and Development Branch, National Institute of Mental Health",
+        "department": "Emotion and Development Branch",
+        "institution": "National Institute of Mental Health",
         "location": "Bethesda, MD, USA"
       }
     ]
@@ -32,15 +33,17 @@
     },
     "groups": [
       {
-        "name": "Applied Computational Psychiatry Lab",
+        "lab": "Applied Computational Psychiatry Lab",
         "leadership": "P.I. Prof. Quentin Huys",
-        "organization": "Division of Psychiatry and Max Planck UCL Centre for Computational Psychiatry and Aging Research, University College London",
+        "department": "Division of Psychiatry and Max Planck UCL Centre for Computational Psychiatry and Aging Research",
+        "institution": "University College London",
         "location": "London, U.K."
       },
       {
-        "name": "Emotion and Development Branch",
+        "lab": null,
         "leadership": "P.I. Prof. Argyris Stringaris and Dr. Daniel Pine",
-        "organization": "National Institute of Mental Health",
+        "department": "Emotion and Development Branch",
+        "institution": "National Institute of Mental Health",
         "location": "Bethesda, MD, USA"
       }
     ]
@@ -58,15 +61,17 @@
     },
     "groups": [
       {
-        "name": "Decision Neuroscience and Psychopathology Lab",
+        "lab": "Decision Neuroscience and Psychopathology Lab",
         "leadership": "P.I. Prof. Alexander Dombrovski",
-        "organization": "Department of Psychiatry, University of Pittsburgh Medical Center",
+        "department": "Department of Psychiatry",
+        "institution": "University of Pittsburgh Medical Center",
         "location": "Pittsburgh, PA, USA"
       },
       {
-        "name": "Translational Neuropsychopharmacology & Neuroimaging Lab",
+        "lab": "Translational Neuropsychopharmacology & Neuroimaging Lab",
         "leadership": "P.I. Dr. Marta Peciña",
-        "organization": "Department of Psychiatry, University of Pittsburgh Medical Center",
+        "department": "Department of Psychiatry",
+        "institution": "University of Pittsburgh Medical Center",
         "location": "Pittsburgh, PA, USA"
       }
     ]

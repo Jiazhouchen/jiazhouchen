@@ -7,6 +7,7 @@ export function PublicationItem({ publication, compact = false }: { publication:
     publication.volume ? `${publication.volume}${publication.issue ? `(${publication.issue})` : ''}` : null,
     publication.pages,
   ].filter(Boolean).join(', ')
+  const hasEqualContribution = publication.authors.some(({ equalContribution }) => equalContribution)
 
   return (
     <article className={compact ? 'output-item output-item--compact' : 'output-item'} id={`publication-${publication.id}`}>
@@ -14,6 +15,7 @@ export function PublicationItem({ publication, compact = false }: { publication:
         <CitationAuthors authors={publication.authors} /> ({publication.year}). {publication.title}.{' '}
         <em>{publication.venue}</em>{details ? `, ${details}` : ''}.{publication.status ? ` ${publication.status}.` : ''}
       </p>
+      {hasEqualContribution && <small className="equal-contribution-note"><sup>*</sup> Equal contribution</small>}
       {!compact && (publication.doi || publication.pmid || publication.pmcid) && (
         <div className="citation-links no-print">
           {publication.doi && (

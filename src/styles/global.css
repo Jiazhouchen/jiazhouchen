@@ -984,6 +984,16 @@ h2 {
   font-weight: 550;
 }
 
+.cv-entry__department {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.cv-entry__department span {
+  font-weight: 500;
+}
+
 .cv-subentry + .cv-subentry {
   margin-top: 0.35rem;
 }
@@ -1042,6 +1052,21 @@ h2 {
 
 .citation {
   margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.equal-contribution-note {
+  display: block;
+  margin: 0.15rem 0 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.equal-contribution-note sup {
+  color: var(--action);
+  font-size: 1.15em;
+  font-weight: 900;
 }
 
 .citation-links {
@@ -1265,6 +1290,16 @@ h2 {
 }
 
 .research-output__body .output-item {
+  padding-left: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+.research-output__body .output-item::before {
+  display: none;
+}
+
+.research-output__description + .citation {
   padding-top: 1rem;
   border-top: 1px solid var(--border-soft);
 }
@@ -1655,6 +1690,7 @@ h2 {
     box-shadow: var(--shadow-glass);
     backdrop-filter: blur(24px) saturate(1.18);
     -webkit-backdrop-filter: blur(24px) saturate(1.18);
+    pointer-events: none;
   }
 
   .experience-detail--home,

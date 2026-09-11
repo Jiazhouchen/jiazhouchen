@@ -64,9 +64,12 @@ export function CvPage() {
                 <span>{entry.dateLabel}</span>
               </div>
               {entry.groups.map((group) => (
-                <div className="cv-subentry" key={group.name}>
-                  <p className="cv-entry__lead">{group.name} <span>({group.leadership})</span></p>
-                  <p>{group.organization}, {group.location}</p>
+                <div className="cv-subentry" key={`${group.lab ?? group.department}-${group.location}`}>
+                  {group.lab && <p className="cv-entry__lead">{group.lab} <span>({group.leadership})</span></p>}
+                  <p className="cv-entry__department">
+                    {group.department}{!group.lab && <span> ({group.leadership})</span>}
+                  </p>
+                  <p>{group.institution}, {group.location}</p>
                 </div>
               ))}
             </article>

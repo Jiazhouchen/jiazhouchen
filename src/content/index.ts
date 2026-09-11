@@ -94,9 +94,10 @@ const researchSchema = z.array(z.object({
     institution: z.string().min(1),
   }),
   groups: z.array(z.object({
-    name: z.string().min(1),
+    lab: z.string().min(1).nullable(),
     leadership: z.string().min(1),
-    organization: z.string().min(1),
+    department: z.string().min(1),
+    institution: z.string().min(1),
     location: z.string().min(1),
   })).min(1),
 }))
