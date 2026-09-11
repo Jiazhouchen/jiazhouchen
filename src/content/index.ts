@@ -72,7 +72,7 @@ const educationSchema = z.array(z.object({
   dateLabel: z.string().min(1),
   experience: z.object({
     locationId: id,
-    department: z.string().min(1),
+    department: z.string().min(1).nullable(),
     institutionIndex: z.number().int().nonnegative(),
   }),
   advisors: z.array(z.string().min(1)),
@@ -90,13 +90,13 @@ const researchSchema = z.array(z.object({
   dateLabel: z.string().min(1),
   experience: z.object({
     locationId: id,
-    department: z.string().min(1),
+    department: z.string().min(1).nullable(),
     institution: z.string().min(1),
   }),
   groups: z.array(z.object({
     lab: z.string().min(1).nullable(),
     leadership: z.string().min(1),
-    department: z.string().min(1),
+    department: z.string().min(1).nullable(),
     institution: z.string().min(1),
     location: z.string().min(1),
   })).min(1),
