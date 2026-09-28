@@ -1,5 +1,12 @@
 [
   {
+    "id": "nimh-oft-travel-2026",
+    "description": "OFT Trainee Travel Award",
+    "amount": "$1,000",
+    "yearAwarded": 2026,
+    "awardingAgency": "NIMH Office of Fellowship Training (OFT), Bethesda, MD, USA"
+  },
+  {
     "id": "ut-austin-undergraduate-research-fund-2017",
     "description": "Undergraduate Research Fund",
     "amount": "$2,000",

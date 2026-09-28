@@ -1,4 +1,40 @@
-[
+[   
+  {
+    "id": "sne-2026-incentive-confidence",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Raymond, C.", "highlight": false },
+      { "name": "Kao, C. H.", "highlight": false },
+      { "name": "Ziemba, C.", "highlight": false },
+      { "name": "Lopez-Guzman, S.", "highlight": false }
+    ],
+    "title": "Computation modeling of the effects of incentives, risk and ambiguity preference on perceptual confidence judgements",
+    "researchAreaIds": ["learning-decision-meta-level-modeling"],
+    "description": "Utilizing computation models to incoperate monetary incentives and economic preferences in predicting perceptual confidence judgements.",
+    "format": "Poster presentation",
+    "venue": "Society of NeuroEconomics Annual Meeting - 2026",
+    "date": "2026-10",
+    "dateLabel": "October 2026",
+    "location": "Pasadena, CA, USA"
+  },
+  {
+    "id": "nimh-training-day-2026-incentive-confidence",
+    "authors": [
+      { "name": "Chen, J.", "highlight": true },
+      { "name": "Raymond, C.", "highlight": false },
+      { "name": "Kao, C. H.", "highlight": false },
+      { "name": "Ziemba, C.", "highlight": false },
+      { "name": "Lopez-Guzman, S.", "highlight": false }
+    ],
+    "title": "Incentives, risk and ambiguity preference bias perceptual confidence judgements",
+    "researchAreaIds": ["learning-decision-meta-level-modeling"],
+    "description": "Investigating the role of monetary incentives and economic preferences in biasing perceptual confidence judgements.",
+    "format": "Poster presentation",
+    "venue": "NIMH Annual Training Day",
+    "date": "2026-09",
+    "dateLabel": "September 2026",
+    "location": "Washington D.C., USA"
+  },
   {
     "id": "cpc-2025-llm-meg",
     "authors": [
