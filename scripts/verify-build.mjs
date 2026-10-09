@@ -20,9 +20,9 @@ if (!research.includes('https://jiazhouchen.com/research/')) failures.push('/res
 
 for (const liveDoc of liveDocs) {
   const path = getLiveDocPath(liveDoc)
-  const html = await readFile(resolve(dist, path.slice(1)), 'utf8')
+  const html = await readFile(resolve(dist, path.slice(1), 'index.html'), 'utf8')
   if (!html.includes('content="noindex, nofollow"')) failures.push(`${path} is missing static noindex metadata`)
-  if (!html.includes(`${siteUrl}${path}`)) failures.push(`${path} is missing its canonical metadata`)
+  if (!html.includes(`${siteUrl}${path}/`)) failures.push(`${path} is missing its canonical metadata`)
   if (sitemap.includes(path)) failures.push(`sitemap.xml must omit hidden live document ${path}`)
 }
 

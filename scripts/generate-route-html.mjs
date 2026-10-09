@@ -1,5 +1,5 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
-import { dirname, resolve } from 'node:path'
+import { resolve } from 'node:path'
 import { getLiveDocPath, readLiveDocs, siteUrl } from './live-doc-config.mjs'
 
 const root = resolve(import.meta.dirname, '..')
@@ -26,6 +26,12 @@ const routes = [
     description: 'Contact Jiazhou Chen and read current research and hiring posts.',
     robots: 'index, follow',
   },
+  ...liveDocs.map((liveDoc) => ({
+    path: getLiveDocPath(liveDoc).slice(1),
+    title: `${liveDoc.vendor} · Jiazhou Chen`,
+    description: `Conference document presented by Jiazhou Chen at ${liveDoc.vendor}.`,
+    robots: 'noindex, nofollow',
+  })),
 ]
 
 function escapeHtml(value) {
@@ -39,7 +45,7 @@ function escapeHtml(value) {
 }
 
 function pageHtml(route) {
-  const canonical = escapeHtml(route.canonical ?? `${siteUrl}/${route.path}/`)
+  const canonical = escapeHtml(`${siteUrl}/${route.path}/`)
   const title = escapeHtml(route.title)
   const description = escapeHtml(route.description)
   return source
@@ -56,18 +62,6 @@ for (const route of routes) {
   const directory = resolve(dist, route.path)
   await mkdir(directory, { recursive: true })
   await writeFile(resolve(directory, 'index.html'), pageHtml(route))
-}
-
-for (const liveDoc of liveDocs) {
-  const path = getLiveDocPath(liveDoc)
-  const output = resolve(dist, path.slice(1))
-  await mkdir(dirname(output), { recursive: true })
-  await writeFile(output, pageHtml({
-    title: `${liveDoc.vendor} · Jiazhou Chen`,
-    description: `Conference document presented by Jiazhou Chen at ${liveDoc.vendor}.`,
-    robots: 'noindex, nofollow',
-    canonical: `${siteUrl}${path}`,
-  }))
 }
 
 const notFound = source

@@ -13,10 +13,11 @@ const links = [
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
+  const normalizedPathname = pathname.replace(/\/+$/, '') || '/'
   const headerRef = useRef<HTMLElement>(null)
   const cvBrandClickCountRef = useRef(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const liveDoc = content.liveDocs.find((entry) => getLiveDocPath(entry) === pathname)
+  const liveDoc = content.liveDocs.find((entry) => getLiveDocPath(entry) === normalizedPathname)
   const activeIndex = liveDoc
     ? links.length
     : pathname.startsWith('/cv')

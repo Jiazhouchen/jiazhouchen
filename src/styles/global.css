@@ -167,6 +167,9 @@ h2 {
 
 .site-nav--live-doc .site-nav__indicator {
   width: calc((100% - 0.5rem - 1rem) / 5);
+}
+
+.site-nav--live-doc[data-indicator-index="4"] .site-nav__indicator {
   border-color: color-mix(in srgb, var(--live-doc-vendor-color) 62%, var(--glass-border));
   background: color-mix(in srgb, var(--live-doc-vendor-color) 32%, var(--glass-surface-strong));
 }

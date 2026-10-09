@@ -28,7 +28,7 @@ function generatedSlug({ vendor, content }: LiveDocRouteConfig) {
 
 export function getLiveDocPath(liveDoc: LiveDocRouteConfig) {
   const configuredUrl = liveDoc.url.trim()
-  if (!configuredUrl) return `/${generatedSlug(liveDoc)}.html`
+  if (!configuredUrl) return `/${generatedSlug(liveDoc)}`
 
   let parsedUrl: URL
   try {
@@ -48,10 +48,10 @@ export function getLiveDocPath(liveDoc: LiveDocRouteConfig) {
   if (!['jiazhouchen.com', 'www.jiazhouchen.com'].includes(parsedUrl.hostname)) {
     throw new Error(`Live document URL must use jiazhouchen.com: "${liveDoc.url}"`)
   }
-  if (!/^\/[a-z0-9_-]+\.html$/i.test(parsedUrl.pathname)) {
-    throw new Error(`Live document URL must use a root-level .html path: "${liveDoc.url}"`)
+  if (!/^\/[a-z0-9_-]+$/i.test(parsedUrl.pathname)) {
+    throw new Error(`Live document URL must use a root-level path: "${liveDoc.url}"`)
   }
-  if (['/index.html', '/404.html'].includes(parsedUrl.pathname.toLowerCase())) {
+  if (['/index', '/404', '/assets', '/cv', '/research', '/connect', '/projects'].includes(parsedUrl.pathname.toLowerCase())) {
     throw new Error(`Live document URL is reserved: "${liveDoc.url}"`)
   }
 

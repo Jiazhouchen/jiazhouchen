@@ -13,7 +13,7 @@ export function LiveDocPage({ liveDoc }: { liveDoc: LiveDoc }) {
   usePageMeta({
     title: `${liveDoc.vendor} · Jiazhou Chen`,
     description: `Conference document presented by Jiazhou Chen at ${liveDoc.vendor}.`,
-    path: routePath,
+    path: `${routePath}/`,
     noIndex: true,
   })
 
