@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState, type MouseEvent, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type CSSProperties, type MouseEvent, type ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import { content } from '../content'
+import { getLiveDocPath } from '../utils/liveDocs'
 import { ThemeToggle } from './ThemeToggle'
 
 const links = [
@@ -14,13 +16,16 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   const headerRef = useRef<HTMLElement>(null)
   const cvBrandClickCountRef = useRef(0)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const activeIndex = pathname.startsWith('/cv')
-    ? 1
-    : pathname.startsWith('/research')
-      ? 2
-      : pathname.startsWith('/connect')
-        ? 3
-        : 0
+  const liveDoc = content.liveDocs.find((entry) => getLiveDocPath(entry) === pathname)
+  const activeIndex = liveDoc
+    ? links.length
+    : pathname.startsWith('/cv')
+      ? 1
+      : pathname.startsWith('/research')
+        ? 2
+        : pathname.startsWith('/connect')
+          ? 3
+          : 0
   const indicatorIndex = hoveredIndex ?? activeIndex
 
   useEffect(() => {
@@ -50,22 +55,23 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <div className="site-shell">
+    <div className={liveDoc ? 'site-shell site-shell--live-doc' : 'site-shell'}>
       <header ref={headerRef} className="site-header no-print">
         <NavLink className="site-brand" to="/" aria-label="Jiazhou Chen, home" onClick={handleBrandClick}>
           Jiazhou Chen
         </NavLink>
         <nav
-          className="site-nav"
+          className={liveDoc ? 'site-nav site-nav--live-doc' : 'site-nav'}
           aria-label="Primary navigation"
-          data-active-index={activeIndex}
-          data-indicator-index={indicatorIndex}
+          data-active-index={activeIndex ?? undefined}
+          data-indicator-index={indicatorIndex ?? undefined}
+          style={liveDoc ? { '--live-doc-vendor-color': liveDoc.vendor_color } as CSSProperties : undefined}
           onPointerLeave={() => setHoveredIndex(null)}
           onBlur={(event) => {
             if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setHoveredIndex(null)
           }}
         >
-          <span className="site-nav__indicator" aria-hidden="true" />
+          {indicatorIndex === null ? null : <span className="site-nav__indicator" aria-hidden="true" />}
           {links.map(({ to, label, end }, index) => (
             <NavLink
               key={to}
@@ -78,6 +84,15 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               {label}
             </NavLink>
           ))}
+          {liveDoc ? (
+            <span
+              className="site-nav__link site-nav__vendor is-active"
+              aria-current="page"
+              onPointerEnter={() => setHoveredIndex(links.length)}
+            >
+              {liveDoc.vendor}
+            </span>
+          ) : null}
         </nav>
         <ThemeToggle />
       </header>

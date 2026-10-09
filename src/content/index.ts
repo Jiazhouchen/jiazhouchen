@@ -4,6 +4,7 @@ import additionalJson from './additional.json'
 import awardsJson from './awards.json'
 import contactJson from './contact.json'
 import educationJson from './education.json'
+import liveDocJson from './liveDoc.json'
 import locationsJson from './locations.json'
 import postJson from './post.json'
 import profileJson from './profile.json'
@@ -13,6 +14,7 @@ import researchJson from './research.json'
 import skillsJson from './skills.json'
 import teachingJson from './teaching.json'
 import presentationsJson from './presentations.json'
+import { getLiveDocPath } from '../utils/liveDocs'
 
 const id = z.string().min(1).regex(/^[a-z0-9-]+$/, 'Use lowercase kebab-case IDs')
 const date = z.string().regex(/^\d{4}-\d{2}$/, 'Use an ISO year-month such as 2025-07')
@@ -43,6 +45,13 @@ const contactSchema = z.object({
     description: z.string().min(1),
   })).min(1),
 })
+
+const liveDocSchema = z.array(z.object({
+  vendor: z.string().min(1),
+  vendor_color: z.string().regex(/^#[\da-f]{6}$/i, 'Use a six-digit hex color'),
+  content: z.string().regex(/^asset\/pdfs\/[^/]+\.pdf$/i, 'Use a PDF in asset/pdfs'),
+  url: z.string(),
+}))
 
 const postsSchema = z.array(z.object({
   id,
@@ -215,6 +224,7 @@ function ensureReferences(label: string, refs: string[], known: Set<string>) {
 export function validateAllContent() {
   const profile = parse('profile', profileSchema, profileJson)
   const contact = parse('contact', contactSchema, contactJson)
+  const liveDocs = parse('liveDoc', liveDocSchema, liveDocJson)
   const posts = parse('post', postsSchema, postJson)
   const education = parse('education', educationSchema, educationJson)
   const research = parse('research', researchSchema, researchJson)
@@ -226,6 +236,19 @@ export function validateAllContent() {
   const awards = parse('awards', awardsSchema, awardsJson)
   const locations = parse('locations', z.array(locationSchema).min(1), locationsJson)
   const researchAreas = parse('researchAreas', researchAreasSchema, researchAreasJson)
+
+  const liveDocPaths = new Set<string>()
+  liveDocs.forEach((liveDoc, index) => {
+    let path: string
+    try {
+      path = getLiveDocPath(liveDoc)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error)
+      throw new Error(`Invalid content:\nliveDoc.${index}.url: ${message}`)
+    }
+    if (liveDocPaths.has(path)) throw new Error(`Invalid content: duplicate liveDoc URL path "${path}"`)
+    liveDocPaths.add(path)
+  })
 
   const collections = {
     'contact profile': contact.profiles,
@@ -311,7 +334,7 @@ export function validateAllContent() {
   publications.forEach((publication) => ensureReferences(`publication ${publication.id}.researchAreaIds`, publication.researchAreaIds, researchAreaIds))
   presentations.forEach((presentation) => ensureReferences(`presentation ${presentation.id}.researchAreaIds`, presentation.researchAreaIds, researchAreaIds))
 
-  return { profile, contact, posts, education, research, teaching, publications, presentations, skills, additional, awards, experiences, researchAreas }
+  return { profile, contact, liveDocs, posts, education, research, teaching, publications, presentations, skills, additional, awards, experiences, researchAreas }
 }
 
 export const content = validateAllContent()
@@ -319,5 +342,6 @@ export const content = validateAllContent()
 export type Content = typeof content
 export type Publication = Content['publications'][number]
 export type Presentation = Content['presentations'][number]
+export type LiveDoc = Content['liveDocs'][number]
 export type Experience = Content['experiences']['experiences'][number]
 export type ExperienceLocation = Content['experiences']['locations'][number]

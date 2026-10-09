@@ -1,13 +1,7 @@
-import { BookOpen, Github, GraduationCap, Mail } from 'lucide-react'
+import { ContactButtonRow } from '../components/ContactButtonRow'
 import { content } from '../content'
 import { usePageMeta } from '../utils/pageMeta'
 import { getVisiblePosts } from '../utils/posts'
-
-const icons = {
-  github: Github,
-  scholar: GraduationCap,
-  researchgate: BookOpen,
-} as const
 
 export function ConnectPage() {
   usePageMeta({
@@ -25,28 +19,7 @@ export function ConnectPage() {
       <div className="connect-document">
         <section className="connect-section" id="contact-information" aria-labelledby="contact-information-heading">
           <h2 id="contact-information-heading">Contact Information</h2>
-          <div className="contact-button-row" aria-label="Contact links">
-            <a className="contact-button" href={`mailto:${content.contact.email}`} title="Send an email">
-              <Mail size={20} aria-hidden="true" />
-              <span>Email</span>
-            </a>
-            {content.contact.profiles.map((profile) => {
-              const Icon = icons[profile.id as keyof typeof icons] ?? BookOpen
-              return (
-                <a
-                  className="contact-button"
-                  href={profile.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  title={profile.description}
-                  key={profile.id}
-                >
-                  <Icon size={20} aria-hidden="true" />
-                  <span>{profile.label}</span>
-                </a>
-              )
-            })}
-          </div>
+          <ContactButtonRow />
         </section>
 
         <section className="connect-section" id="news" aria-labelledby="news-heading">
